@@ -1,5 +1,6 @@
 'use client';
-import { Box, Card, Container, Flex, Image, Text, Title } from '@mantine/core';
+import Image from 'next/image';
+import { Box, Card, Container, Flex, Text, Title } from '@mantine/core';
 import { QuotesIcon } from '@phosphor-icons/react';
 import classes from './OurCraft.module.css';
 
@@ -14,13 +15,17 @@ export function OurCraft() {
           align="center"
           gap={{ base: 'xl', md: 60 }}
         >
-          <Card className={classes.card} h={450} w={200} p="sm">
+          <Card className={classes.card} w={200} h={450} p="sm">
             <Image
               src="/assets/our-craft.png"
               alt="Hand-folded wontons and slow-simmered broth"
-              h="100%"
-              w="100%"
-              style={{ objectPosition: 'center', borderRadius: '0.5rem' }}
+              width={200}
+              height={450}
+              style={{
+                borderRadius: '0.5rem',
+                width: '100%',
+                height: '100%',
+              }}
             />
           </Card>
 

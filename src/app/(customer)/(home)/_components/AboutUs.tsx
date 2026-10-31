@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   Container,
@@ -6,7 +7,6 @@ import {
   Title,
   SimpleGrid,
   Group,
-  Image,
   Text,
   Button,
   Anchor,
@@ -20,7 +20,7 @@ export function AboutUs() {
   return (
     <section aria-labelledby="about-us-heading" className={classes.about}>
       <Container pos="relative" py={50}>
-        <Title id="about-us-heading" order={3} mb="sm">
+        <Title id="about-us-heading" order={2} mb="sm">
           About Us
         </Title>
         <Flex
@@ -28,14 +28,14 @@ export function AboutUs() {
           gap="xl"
           align={{ md: 'center' }}
         >
-          <Box className={classes.box} bdrs="md">
+          <Flex className={classes.box} justify="center" bdrs="md">
             <Image
               src="/assets/about.png"
               alt="Hand-folded wontons and slow-simmered broth"
-              w={350}
-              mx="auto"
+              width={350}
+              height={350}
             />
-          </Box>
+          </Flex>
 
           <Stack gap="md">
             <Text>

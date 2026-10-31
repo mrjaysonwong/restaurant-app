@@ -41,12 +41,9 @@ export function HeroHeader() {
             className={classes.image}
             src="/assets/test-bowl-v1.png"
             alt="Wonton Noodle Soup"
-            width={400}
-            height={400}
+            width={640}
+            height={498}
             priority
-            style={{
-              objectFit: 'contain',
-            }}
           />
         </Box>
       </Flex>

@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import {
-  Box,
   Button,
   Container,
   Group,
@@ -19,7 +18,7 @@ export function FeaturedMenu() {
     <section aria-labelledby="featured-menu-heading">
       <Container py="xl">
         <Group justify="space-between" mb="lg">
-          <Title id="featured-menu-heading" order={3}>
+          <Title id="featured-menu-heading" order={2}>
             Featured Menu
           </Title>
           <Button
@@ -58,19 +57,18 @@ export function FeaturedMenu() {
                   color: 'inherit',
                 }}
               >
-                <Stack>
-                  <Box pos="relative" h={{ base: 180, sm: 210 }} w="100%">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      sizes="(max-width: 768px) 210px, 210px"
-                      priority={false}
-                      style={{
-                        objectFit: 'contain',
-                      }}
-                    />
-                  </Box>
+                <Stack align="center">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={150}
+                    height={150}
+                    priority
+                    style={{
+                      width: 'clamp(200px, 12vw, 250px)',
+                      height: 'auto',
+                    }}
+                  />
 
                   <Text fw={600} ta="center" size="sm">
                     {item.name}

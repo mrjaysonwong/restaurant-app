@@ -50,7 +50,7 @@ export function OurLocation() {
       style={{ background: '#FEFAF3' }}
     >
       <Container py={50}>
-        <Title id="our-location-heading" order={3} mb="xl">
+        <Title id="our-location-heading" order={2} mb="xl">
           Our Location
         </Title>
 

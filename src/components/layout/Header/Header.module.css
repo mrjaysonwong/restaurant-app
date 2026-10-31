@@ -1,6 +1,15 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 74px;
+  z-index: 1000;
+}
+
 .logo {
-  width: clamp(100px, 12vw, 110px);
-  height: auto;
+  height: clamp(58px, 5.5vw, 62px);
+  width: auto;
   display: flex;
 }
 

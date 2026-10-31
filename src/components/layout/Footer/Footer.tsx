@@ -61,19 +61,21 @@ export function Footer() {
         >
           {/* Brand */}
           <Box maw={260}>
-            <Group gap={10} mb="sm">
+            {/* <Group gap={10} mb="sm">
               <Link href="/">
                 <Image
                   className={classes.logo}
                   src="/assets/brand_logo.png"
                   alt="Mr Wongton logo"
-                  width={2000}
-                  height={1170}
+                  width={110}
+                  height={40}
                   priority
-                  unoptimized
+                  style={{
+                    height: 'auto',
+                  }}
                 />
               </Link>
-            </Group>
+            </Group> */}
             <Text c="#FEFAF3" fz="sm" lh={1.6}>
               Simple food done properly. Wontons, noodles, broth, and nothing to
               hide behind.
@@ -141,8 +143,6 @@ export function Footer() {
         </Flex>
 
         <Divider my="xl" color="gray.7" />
-
-        {/* Bottom bar */}
 
         <Text c="dimmed" fz="xs">
           © 2026 Mr Wongton. All rights reserved.

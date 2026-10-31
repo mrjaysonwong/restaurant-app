@@ -25,13 +25,8 @@ export function Header() {
   return (
     <Box
       component="header"
+      className={classes.header}
       style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        height: 80,
-        zIndex: 1000,
         transform: `translateY(${(scrollProgress - 1) * 100}%)`,
         backgroundColor: backgroundColor,
       }}
@@ -43,10 +38,9 @@ export function Header() {
               className={classes.logo}
               src="/assets/brand_logo.png"
               alt="Mr Wongton logo"
-              width={2000}
-              height={1170}
+              width={180}
+              height={90}
               priority
-              unoptimized
             />
           </Link>
 
