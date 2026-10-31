@@ -1,0 +1,29 @@
+.about {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding-block: var(
+    --mantine-spacing-xl
+  ); /* mobile: padding inside the band */
+}
+
+.box {
+  position: relative;
+  isolation: isolate;
+  background: #242424;
+  overflow: hidden; /* clips the image to the rounded corners */
+  width: 100%; /* give the box a size, since it has no content now */
+  height: auto;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20260113/pngtree-red-background-with-golden-chinese-clouds-and-lanterns-for-new-year-image_21098829.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.05; /* adjust to taste */
+}

@@ -1,0 +1,90 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0 1.5rem;
+
+  /* 1. Establish a stacking context for your absolute children */
+  position: relative;
+  isolation: isolate;
+
+  background: radial-gradient(
+    circle 650px at 60% 105%,
+    rgb(213, 146, 45) 0%,
+    rgb(213, 146, 45) 49%,
+    rgba(217, 83, 0, 1) 100%
+  );
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.04) 0deg 8deg,
+    transparent 8deg 16deg
+  );
+  pointer-events: none;
+}
+
+.title {
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-family: var(--font-gochihand);
+}
+
+.image {
+  width: min(100%, clamp(280px, 40vw, 400px));
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
+
+.imageShadow {
+  padding-bottom: 2rem;
+  background: radial-gradient(
+      ellipse closest-side,
+      rgba(0, 0, 0, 0.5),
+      transparent
+    )
+    no-repeat center bottom / 50% 15%;
+}
+
+/* iPhone SE */
+@media (max-width: 390px) {
+  .hero {
+    min-height: auto;
+    padding-block: 7rem;
+  }
+}
+
+/* On Landscape Small devices */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero {
+    min-height: auto;
+    padding-block: 5rem;
+  }
+
+  .title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+}
+
+/* iPad */
+@media (min-width: 744px) and (max-width: 1024px) {
+  .hero {
+    min-height: 70vh;
+  }
+}
+
+@media (min-height: 1032px) and (max-width: 1376px) {
+  .hero {
+    min-height: 60vh;
+  }
+}

@@ -1,0 +1,53 @@
+.craft {
+  position: relative;
+  width: 100%;
+  padding-block: var(
+    --mantine-spacing-xl
+  ); /* mobile: padding inside the band */
+}
+
+.quoteIcon {
+  position: absolute;
+  top: -50px;
+  left: -30px;
+  color: white;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card {
+  backface-visibility: hidden;
+  flex-shrink: 0;
+  box-shadow: -15px 25px 15px -15px rgba(0, 0, 0, 0.35),
+    /* left + bottom */ 15px 25px 15px -15px rgba(0, 0, 0, 0.35),
+    /* soft glow on all sides */ 0 25px 10px -15px rgba(0, 0, 0, 0.2); /* depth at the bottom */
+}
+
+.band {
+  position: absolute;
+  inset: 0; /* mobile: band fills the whole section, so no overflow */
+  
+  /* background: linear-gradient(
+    175deg,
+    rgb(189, 15, 15) 0%,
+    rgb(50, 27, 27) 170%
+  ); */
+  background: linear-gradient(
+    175deg,
+    rgba(255, 189, 84, 1) 0%,
+    rgba(171, 0, 0, 1) 170%
+  );
+}
+
+@media (min-width: 62em) {
+  .craft {
+    padding-block: 0; /* section height = card height (400px) */
+    margin-block: var(--mantine-spacing-xl);
+  }
+
+  .band {
+    top: 30px; /* band is shorter than the card, */
+    bottom: 30px; /* so the card overflows 50px above and below */
+  }
+}

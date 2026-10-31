@@ -1,0 +1,5 @@
+.logo {
+  width: clamp(100px, 12vw, 110px);
+  height: auto;
+  display: flex;
+}

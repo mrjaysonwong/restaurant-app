@@ -1,0 +1,67 @@
+export const featuredMenu = [
+  {
+    id: 1,
+    slug: 'classic-pork-wonton-soup',
+    name: 'Classic Pork Wonton Soup',
+    description:
+      'Hand-wrapped pork wontons in a rich, slow-simmered broth with springy egg noodles.',
+    price: 9.5,
+    image: '/assets/menu/menu-1-v1.png',
+    category: 'noodle-soup',
+    tags: ['bestseller', 'signature'],
+    spicy: false,
+    isFeatured: true,
+  },
+  {
+    id: 2,
+    slug: 'pork-and-beef-wonton-soup',
+    name: 'Pork & Beef Wonton Soup',
+    description:
+      'A hearty mix of pork and beef wontons in a deep, savory broth.',
+    price: 10.5,
+    image: '/assets/menu/menu-3-v1.png',
+    category: 'noodle-soup',
+    tags: ['hearty'],
+    spicy: false,
+    isFeatured: true,
+  },
+  {
+    id: 3,
+    slug: 'spicy-sichuan-wonton-soup',
+    name: 'Spicy Sichuan Wonton Soup',
+    description:
+      'Silky wontons in a fiery Sichuan chili broth with garlic and scallions.',
+    price: 10,
+    image: '/assets/menu/menu-5-v1.png',
+    category: 'noodle-soup',
+    tags: ['spicy', 'popular'],
+    spicy: true,
+    isFeatured: true,
+  },
+  {
+    id: 4,
+    slug: 'char-siu-wonton-soup',
+    name: 'Char Siu Wonton Soup',
+    description:
+      'Wontons topped with sweet, caramelized char siu pork in a savory broth.',
+    price: 12,
+    image: '/assets/menu/menu-7-v1.png',
+    category: 'noodle-soup',
+    tags: ['chef-pick'],
+    spicy: false,
+    isFeatured: true,
+  },
+  {
+    id: 5,
+    slug: 'steamed-wonton-platter',
+    name: 'Steamed Wonton Platter',
+    description:
+      'A shareable platter of steamed wontons with soy-vinegar and chili oil dipping sauces.',
+    price: 11,
+    image: '/assets/menu/menu-9-v1.png',
+    category: 'dumplings',
+    tags: ['shareable'],
+    spicy: false,
+    isFeatured: true,
+  },
+];
