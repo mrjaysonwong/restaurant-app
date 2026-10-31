@@ -1,10 +1,10 @@
 'use client';
+import Image from 'next/image';
 import {
   Box,
   Button,
   Container,
   Group,
-  Image,
   ScrollArea,
   Stack,
   Text,
@@ -29,7 +29,6 @@ export function FeaturedMenu() {
             rightSection={<CaretRightIcon size={16} />}
             size="compact-sm"
             c="orange"
-           
           >
             View All
           </Button>
@@ -42,11 +41,11 @@ export function FeaturedMenu() {
           mx="calc(var(--mantine-spacing-md) * -1)"
         >
           <Group
-            gap="xs"
+            gap="sm"
             wrap="nowrap"
             align="stretch"
             miw="100%"
-            px="sm"
+            px="md"
             w="max-content"
           >
             {featuredMenu.map((item) => (
@@ -60,13 +59,19 @@ export function FeaturedMenu() {
                 }}
               >
                 <Stack>
-                  <Image
-                    h={{ base: 140, sm: 180 }}
-                    w="auto"
-                    fit="contain"
-                    src={item.image}
-                    alt={item.name}
-                  />
+                  <Box pos="relative" h={{ base: 180, sm: 210 }} w="100%">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="(max-width: 768px) 210px, 210px"
+                      priority={false}
+                      style={{
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </Box>
+
                   <Text fw={600} ta="center" size="sm">
                     {item.name}
                   </Text>
